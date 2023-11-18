@@ -34,6 +34,9 @@
         </div>
       </div>
     </div>
+    {% if "navigation.tabs.header" in features %}
+    {% include "partials/tabs.html" %}
+    {% endif %}
     {% if config.theme.palette %}
     {% if not config.theme.palette is mapping %}
     {% include "partials/palette.html" %}
@@ -53,9 +56,6 @@
     <div class="md-header__source">
       {% include "partials/source.html" %}
     </div>
-    {% endif %}
-    {% if "navigation.tabs.header" in features %}
-    {% include "partials/tabs.html" %}
     {% endif %}
   </nav>
   {% if "navigation.tabs.sticky" in features and not "navigation.tabs.header" in features %}
