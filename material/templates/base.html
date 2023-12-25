@@ -44,10 +44,17 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
+<<<<<<< HEAD
       <link rel="stylesheet" href="{{ 'assets/stylesheets/main.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.css' | url }}">
+=======
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.50c56a3b.min.css' | url }}">
+      {% if config.theme.palette %}
+        {% set palette = config.theme.palette %}
+        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.06af60db.min.css' | url }}">
+>>>>>>> upstream/master
       {% endif %}
       {% include "partials/icons.html" %}
     {% endblock %}
@@ -249,7 +256,11 @@
       </script>
     {% endblock %}
     {% block scripts %}
+<<<<<<< HEAD
       <script src="{{ 'assets/javascripts/bundle.js' | url }}"></script>
+=======
+      <script src="{{ 'assets/javascripts/bundle.d7c377c4.min.js' | url }}"></script>
+>>>>>>> upstream/master
       {% for script in config.extra_javascript %}
         {{ script | script_tag }}
       {% endfor %}
