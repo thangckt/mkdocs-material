@@ -27,59 +27,21 @@
 // Scoped in typesetted content to match specificity of regular content
 .md-typeset {
 
-  // Author, i.e., GitHub user
-  .md-author {
-    position: relative;
-    display: block;
-    flex-shrink: 0;
-    width: px2rem(32px);
-    height: px2rem(32px);
-    overflow: hidden;
-    border-radius: 100%;
-    transition:
-      color 125ms,
-      transform 125ms;
+  // [tablet +]: Allow for rendering content as sidebars
+  @include break-from-device(tablet) {
 
-    // Author image
-    img {
-      display: block;
-    }
+    // Modifier to float block elements
+    .inline {
+      float: inline-start;
+      width: px2rem(234px);
+      margin-inline-end: px2rem(16px);
+      margin-top: 0;
+      margin-bottom: px2rem(16px);
 
-    // More authors
-    &--more {
-      font-size: px2rem(12px);
-      font-weight: 700;
-      line-height: px2rem(32px);
-      color: var(--md-default-fg-color--lighter);
-      text-align: center;
-      background: var(--md-default-fg-color--lightest);
-    }
-
-    // Enlarge image
-    &--long {
-      width: px2rem(48px);
-      height: px2rem(48px);
-    }
-  }
-
-  // Author link
-  a.md-author {
-    transform: scale(1);
-
-    // Author image
-    img {
-      filter: grayscale(100%) opacity(75%);
-      transition: filter 125ms;
-    }
-
-    // Author on focus/hover
-    &:is(:focus, :hover) {
-      z-index: 1;
-      transform: scale(1.1);
-
-      // Author image
-      img {
-        filter: grayscale(0%);
+      // Modifier to move to end (ltr: right, rtl: left)
+      &.end {
+        float: inline-end;
+        margin-inline: px2rem(16px) 0;
       }
     }
   }

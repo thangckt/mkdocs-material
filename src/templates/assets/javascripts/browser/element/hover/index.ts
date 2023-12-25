@@ -20,9 +20,37 @@
  * IN THE SOFTWARE.
  */
 
-export * from "./_"
-export * from "./focus"
-export * from "./hover"
-export * from "./offset"
-export * from "./size"
-export * from "./visibility"
+import {
+  Observable,
+  debounceTime,
+  fromEvent,
+  identity,
+  map,
+  merge,
+  startWith
+} from "rxjs"
+
+/* ----------------------------------------------------------------------------
+ * Functions
+ * ------------------------------------------------------------------------- */
+
+/**
+ * Watch element hover
+ *
+ * @param el - Element
+ * @param duration - Debounce duration
+ *
+ * @returns Element hover observable
+ */
+export function watchElementHover(
+  el: HTMLElement, duration?: number
+): Observable<boolean> {
+  return merge(
+    fromEvent(el, "mouseenter").pipe(map(() => true)),
+    fromEvent(el, "mouseleave").pipe(map(() => false))
+  )
+    .pipe(
+      duration ? debounceTime(duration) : identity,
+      startWith(false)
+    )
+}

@@ -18,23 +18,26 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
+import os
+
 from mkdocs.config.base import Config
-from mkdocs.config.config_options import DictOfItems, Optional, SubConfig, Type
+from mkdocs.config.config_options import DictOfItems, Type
 
 # -----------------------------------------------------------------------------
 # Classes
 # -----------------------------------------------------------------------------
 
-# Author
-class Author(Config):
-    name = Type(str)
-    description = Type(str)
-    avatar = Type(str)
-    slug = Optional(Type(str))
-    url = Optional(Type(str))
+# Privacy plugin configuration
+class PrivacyConfig(Config):
+    enabled = Type(bool, default = True)
+    concurrency = Type(int, default = max(1, os.cpu_count() - 1))
 
-# -----------------------------------------------------------------------------
+    # Settings for caching
+    cache = Type(bool, default = True)
+    cache_dir = Type(str, default = ".cache/plugin/privacy")
 
-# Authors
-class Authors(Config):
-    authors = DictOfItems(SubConfig(Author), default = {})
+    # Settings for external assets
+    assets = Type(bool, default = True)
+    assets_fetch = Type(bool, default = True)
+    assets_fetch_dir = Type(str, default = "assets/external")
+    assets_expr_map = DictOfItems(Type(str), default = {})
