@@ -34,6 +34,8 @@ plugins:
 
 For a list of all settings, please consult the [plugin documentation].
 
+  [plugin documentation]: ../plugins/blog.md
+
 #### Advanced settings :material-alert-decagram:{ .mdx-pulse title="Added on November 23, 2023" }
 
 <!-- md:sponsors -->
@@ -53,8 +55,6 @@ the blog, but can be helpful for customizations:
 - [`authors_profiles_pagination_per_page`][config.authors_profiles_pagination_per_page]
 
 We'll add more settings here, as we discover new use cases.
-
-  [plugin documentation]: ../plugins/blog.md
 
   [Insiders]: ../insiders/index.md
   [built-in blog plugin]: ../plugins/blog.md
@@ -240,7 +240,7 @@ Create a new file called `hello-world.md` and add the following lines:
 ``` yaml
 ---
 draft: true # (1)!
-date: 2023-01-31 # (2)!
+date: 2024-01-31 # (2)!
 categories:
   - Hello
   - World
@@ -329,7 +329,7 @@ each post, as well as in post excerpts on index pages:
 
 ``` yaml
 ---
-date: 2023-01-31
+date: 2024-01-31
 authors:
   - squidfunk
     ...
@@ -375,7 +375,7 @@ add them to the front matter `categories` property:
 
 ``` yaml
 ---
-date: 2023-01-31
+date: 2024-01-31
 categories:
   - Hello
   - World
@@ -401,7 +401,7 @@ part of a post, the post is linked from the [tags index]:
 
 ``` yaml
 ---
-date: 2023-01-31
+date: 2024-01-31
 tags:
   - Foo
   - Bar
@@ -444,7 +444,7 @@ to add related links to a post:
 
 ``` yaml
 ---
-date: 2023-01-31
+date: 2024-01-31
 links:
   - plugins/search.md
   - insiders/index.md#how-to-become-a-sponsor
@@ -460,7 +460,7 @@ links and even use nesting:
 
 ``` yaml
 ---
-date: 2023-01-31
+date: 2024-01-31
 links:
   - plugins/search.md
   - insiders/index.md#how-to-become-a-sponsor
@@ -520,7 +520,7 @@ post:
 
 ``` yaml
 ---
-date: 2023-01-31
+date: 2024-01-31
 readtime: 15
 ---
 
@@ -534,6 +534,11 @@ This will disable automatic reading time computation.
   [enabled]: ../plugins/blog.md#config.post_readtime
 
 #### Setting defaults
+
+<!-- md:sponsors -->
+<!-- md:version insiders-4.21.0 -->
+<!-- md:plugin [meta] – built-in -->
+<!-- md:flag experimental -->
 
 If you have a lot of posts, it might feel redundant to define all of the above
 for each post. Luckily, the [built-in meta plugin] allows to set default front

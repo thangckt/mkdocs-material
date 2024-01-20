@@ -96,8 +96,8 @@ which are currently exclusively available to sponsors:
 - [x] [Tags plugin: advanced settings] :material-alert-decagram:{ .mdx-pulse title="Added on December 23, 2023" }
 - [x] [Tags plugin: nested tags] :material-alert-decagram:{ .mdx-pulse title="Added on December 23, 2023" }
 - [x] [Tags plugin: shadow tags] :material-alert-decagram:{ .mdx-pulse title="Added on December 23, 2023" }
-- [x] [Stay on page when switching languages] :material-alert-decagram:{ .mdx-pulse title="Added on December 8, 2023" }
-- [x] [Blog plugin: author profiles] :material-alert-decagram:{ .mdx-pulse title="Added on November 26, 2023" }
+- [x] [Stay on page when switching languages]
+- [x] [Blog plugin: author profiles]
 - [x] [Blog plugin: advanced settings]
 - [x] [Projects plugin]
 - [x] [Instant prefetching]
@@ -105,7 +105,7 @@ which are currently exclusively available to sponsors:
 - [x] [Social plugin: background images]
 - [x] [Code range selection]
 - [x] [Code annotations: custom selectors]
-- [x] [Privacy plugin: optimization support]
+- [x] [Privacy plugin: advanced settings]
 - [x] [Optimize plugin]
 - [x] [Navigation path] (Breadcrumbs)
 - [x] [Typeset plugin]
@@ -115,7 +115,7 @@ which are currently exclusively available to sponsors:
 - [x] [Blog plugin: custom index pages]
 - [x] [Blog plugin: related links]
 - [x] [Meta plugin]
-- [x] [Tags plugin: additional indexes]
+- [x] [Tags plugin: configurable listings]
 
 </div>
 
@@ -173,9 +173,7 @@ You can cancel your sponsorship anytime.[^5]
 [![Cirrus CI]](https://cirrus-ci.org/){ target=_blank title="Cirrus CI" }
 [![Basler]](https://docs.baslerweb.com/){ target=_blank title="Basler" }
 [![KX]](https://kx.com/){ target=_blank title="KX Systems" }
-[![Manticore Games]](https://www.manticoregames.com/){ target=_blank title="Manticore Games" }
 [![Prefect]](https://orion-docs.prefect.io/){ target=_blank title="Prefect" }
-[![Datadog]](https://datadoghq.com/){ target=_blank title="Datadog" }
 [![Zenoss]](https://zenoss.com/){ target=_blank title="Zenoss" }
 [![Posit]](https://docs.posit.co){ target=_blank title="Posit" }
 [![n8n]](https://n8n.io){ target=_blank title="n8n" }
@@ -211,9 +209,7 @@ You can cancel your sponsorship anytime.[^5]
   [Cirrus CI]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-cirrus-ci.png
   [Basler]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-basler.png
   [KX]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-kx.png
-  [Manticore Games]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-manticore-games.png
   [Prefect]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-prefect.png
-  [Datadog]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-datadog.png
   [Zenoss]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-zenoss.png
   [Posit]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-posit.png
   [n8n]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-n8n.png
@@ -273,16 +269,16 @@ are released for general availability.
 - [x] [Meta plugin]
 - [x] [Blog plugin: related links]
 - [x] [Blog plugin: custom index pages]
-- [x] [Tags plugin: additional indexes]
+- [x] [Tags plugin: configurable listings]
 - [x] [Tags plugin: allow list] + [custom sorting]
 - [x] [Navigation subtitles]
 
   [Meta plugin]: ../plugins/meta.md
   [Blog plugin: related links]: ../setup/setting-up-a-blog.md#adding-related-links
   [Blog plugin: custom index pages]: ../setup/setting-up-a-blog.md#custom-index-pages
-  [Tags plugin: additional indexes]: ../setup/setting-up-tags.md#+tags.tags_extra_files
-  [Tags plugin: allow list]: ../setup/setting-up-tags.md#+tags.tags_allowed
-  [custom sorting]: ../setup/setting-up-tags.md#+tags.tags_compare
+  [Tags plugin: configurable listings]: ../setup/setting-up-tags.md#configurable-listings
+  [Tags plugin: allow list]: ../plugins/tags.md#config.tags_allowed
+  [custom sorting]: ../plugins/tags.md#config.tags_sort_by
   [Navigation subtitles]: ../reference/index.md#setting-the-page-subtitle
 
 #### $ 20,000 – Jalapeño
@@ -290,7 +286,7 @@ are released for general availability.
 - [x] [Optimize plugin]
 - [x] [Typeset plugin]
 - [x] [Navigation path] (Breadcrumbs)
-- [x] [Privacy plugin: optimization support]
+- [x] [Privacy plugin: advanced settings]
 - [x] [Privacy plugin: external links]
 - [x] [Instant prefetching]
 - [x] [Blog plugin: advanced settings]
@@ -298,8 +294,8 @@ are released for general availability.
 
   [Optimize plugin]: ../plugins/optimize.md
   [Typeset plugin]: ../plugins/typeset.md
-  [Privacy plugin: external links]: ../setup/ensuring-data-privacy.md#+privacy.links
-  [Privacy plugin: optimization support]: ../setup/ensuring-data-privacy.md#+privacy.assets_include
+  [Privacy plugin: external links]: ../plugins/privacy.md#external-links
+  [Privacy plugin: advanced settings]: ../setup/ensuring-data-privacy.md#advanced-settings
   [Navigation path]: ../setup/setting-up-navigation.md#navigation-path
   [Instant prefetching]: ../setup/setting-up-navigation.md#instant-prefetching
   [Blog plugin: advanced settings]: ../setup/setting-up-a-blog.md#advanced-settings
@@ -318,12 +314,12 @@ are released for general availability.
 
   [Projects plugin]: ../plugins/projects.md
   [Social plugin: custom layouts]: ../setup/setting-up-social-cards.md#customization
-  [Social plugin: background images]: ../setup/setting-up-social-cards.md#+social.cards_layout_params.background_image
+  [Social plugin: background images]: ../plugins/social.md#option.background_image
   [Code range selection]: ../reference/code-blocks.md#code-selection-button
   [Code annotations: custom selectors]: ../reference/code-blocks.md#custom-selectors
   [Stay on page when switching languages]: ../setup/changing-the-language.md#stay-on-page
-  [Tags plugin: nested tags]: ../plugins/tags.md#config.tags_hierarchy
-  [Tags plugin: shadow tags]: ../plugins/tags.md#config.shadow
+  [Tags plugin: nested tags]: ../setup/setting-up-tags.md#nested-tags
+  [Tags plugin: shadow tags]: ../setup/setting-up-tags.md#shadow-tags
 
 #### $ 28,000 – Lemon Drop
 
