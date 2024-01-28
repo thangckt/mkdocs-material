@@ -65,6 +65,8 @@ theme:
     - search.suggest
     - toc.follow
     # - toc.integrate
+    - navigation.tabs.sticky
+    - navigation.tabs.header   # only in extended theme
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
