@@ -2,6 +2,16 @@
 
 ## Material for MkDocs Insiders
 
+### 4.53.0 <small>February 24, 2024</small> { id="4.53.0" }
+
+- Added support for automatic instant previews
+- Added support for pinned blog posts
+
+### 4.52.3 <small>February 21, 2024</small> { id="4.52.3" }
+
+- Fixed resolution of URLs in instant previews
+- Fixed instant previews not mounting for same-page links
+
 ### 4.52.2 <small>February 7, 2024</small> { id="4.52.2" }
 
 - Fixed #6735: Instant previews misplaced when below tabs

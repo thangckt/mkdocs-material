@@ -1,3 +1,33 @@
+mkdocs-material-9.5.12 (2024-02-29)
+
+  * Fixed #6846: Some meta tags removed on instant navigation (9.4.2 regression)
+  * Fixed #6823: KaTex not rendering on instant navigation (9.5.5 regression)
+  * Fixed #6821: Privacy plugin doesn't handle URLs with encoded characters
+
+mkdocs-material-9.5.11+insiders-4.53.0 (2024-02-24)
+
+  * Added support for automatic instant previews
+  * Added support for pinned blog posts
+
+mkdocs-material-9.5.11 (2024-02-19)
+
+  * Updated Finnish translation
+
+mkdocs-material-9.5.10+insiders-4.52.3 (2024-02-21)
+
+  * Fixed resolution of URLs in instant previews
+  * Fixed instant previews not mounting for same-page links
+
+mkdocs-material-9.5.10 (2024-02-19)
+
+  * Updated Bahasa Malaysia translations
+  * Fixed #6783: Hide continue reading link for blog posts without separators
+  * Fixed #6779: Incorrect positioning of integrated table of contents
+
+mkdocs-material-9.5.9 (2024-02-10)
+
+  * Fixed navigation pruning with tabs and sections enabled
+
 mkdocs-material-9.5.8+insiders-4.52.2 (2024-02-07)
 
   * Fixed #6735: Instant previews misplaced when below tabs

@@ -23,8 +23,8 @@ markdown_extensions:
 
 See additional configuration options:
 
-- [Attribute Lists]{ data-preview="" }
-- [Markdown in HTML]{ data-preview="" }
+- [Attribute Lists]
+- [Markdown in HTML]
 
   [Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
   [Markdown in HTML]: ../setup/extensions/python-markdown.md#markdown-in-html
@@ -122,7 +122,7 @@ but it's always possible to use the [Markdown in HTML] extension with literal
 `figure` and `figcaption` tags:
 
 ``` html title="Image with caption"
-<figure markdown>
+<figure markdown="span">
   ![Image title](https://dummyimage.com/600x400/){ width="300" }
   <figcaption>Image caption</figcaption>
 </figure>
