@@ -2,6 +2,25 @@
 
 ## Material for MkDocs Insiders
 
+### 4.53.8 <small>April 26, 2024</small> { id="4.53.8" }
+
+- Fixed #7052: Preview extension automatically including all pages
+- Fixed #7051: Instant previews mounting on footnote references
+- Fixed #5165: Improved tooltips not mounting in sidebar for typeset plugin
+
+### 4.53.7 <small>April 25, 2024</small> { id="4.53.7" }
+
+- Fixed #7060: Incorrect resolution of translation when using static-i18n
+
+### 4.53.6 <small>April 5, 2024</small> { id="4.53.6" }
+
+- Ensure working directory is set for projects when using projects plugin
+- Fixed #6970: Incorrect relative paths in git submodules with projects plugin
+
+### 4.53.5 <small>April 2, 2024</small> { id="4.53.5" }
+
+- Fixed social plugin crashing when no colors are specified in palettes
+
 ### 4.53.4 <small>March 31, 2024</small> { id="4.53.4" }
 
 - Fixed #6973: Escaping issue in tags extra files deprecation helper

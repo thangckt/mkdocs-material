@@ -387,7 +387,7 @@ from the Insiders features and work together on the project.
 
 Your sponsorship is valid for as long as your monthly or yearly subscription
 is valid. If you choose to cancel your sponsorship, you will lose access to
-the Insiders edition once your cancelation is active and will be automatically
+the Insiders edition once your cancellation is active and will be automatically
 removed by GitHub as a collaborator from the private repository.
 
 [__How do I cancel my sponsorship?__](#sponsorship-cancellation){ #sponsorship-cancellation }
@@ -476,7 +476,7 @@ overrides via [configuration inheritance].
 See the [getting started guide] for more information.
 
   [configuration inheritance]: https://www.mkdocs.org/user-guide/configuration/#configuration-inheritance
-  [getting started guide]: ../getting-started.md#caveats
+  [getting started guide]: ../getting-started.md
   [Card grids]: ../../reference/grids.md?h=grids#using-card-grids
 
 ## Support
@@ -530,7 +530,7 @@ report it on our [issue tracker] in the public community repository. When
 submitting the bug report, please ensure that you do not include any private
 Insiders' source code, as we want to uphold our fair use policy.
 
-[__How can I report an issue in my customizations?__](#customizations-issues){ #costumisations-issues }
+[__How can I report an issue in my customizations?__](#customizations-issues){ #customizations-issues }
 
 Please note, that we do not offer support for customizations as they vary
 widely and are specific to individual cases. Our support is primarily focused on
