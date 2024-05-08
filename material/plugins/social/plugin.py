@@ -46,7 +46,7 @@ from io import BytesIO
 from mkdocs.commands.build import DuplicateFilter
 from mkdocs.exceptions import PluginError
 from mkdocs.plugins import BasePlugin
-from mkdocs.utils import write_file
+from mkdocs.utils import copy_file
 from shutil import copyfile
 from tempfile import NamedTemporaryFile
 
@@ -408,7 +408,7 @@ class SocialPlugin(BasePlugin[SocialConfig]):
             return Image.open(path).convert("RGBA")
 
         # Handle icons
-        icon = theme.get("icon") or {}
+        icon = theme["icon"] or {}
         if "logo" in icon and icon["logo"]:
             logo = icon["logo"]
         else:
@@ -444,17 +444,17 @@ class SocialPlugin(BasePlugin[SocialConfig]):
         svg2png(bytestring = data, write_to = file, scale = 10)
         return Image.open(file)
 
-    # Retrieve font either from the card layout option or from the Material
-    # font defintion. If no font is defined for Material or font is False
-    # then choose a default.
+    # Retrieve font
     def _load_font(self, config):
         name = self.config.cards_layout_options.get("font_family")
         if not name:
-            material_name = config.theme.get("font", False)
-            if material_name is False:
-                name = "Roboto"
+
+            # Retrieve from theme (default: Roboto)
+            theme = config.theme
+            if isinstance(theme["font"], dict) and "text" in theme["font"]:
+                name = theme["font"]["text"]
             else:
-                name = material_name.get("text", "Roboto")
+                name = "Roboto"
 
         # Resolve relevant fonts
         font = {}
@@ -528,18 +528,19 @@ class SocialPlugin(BasePlugin[SocialConfig]):
             with requests.get(match) as res:
                 res.raise_for_status()
 
-                # Extract font family name and style using the content in the
-                # response via ByteIO to avoid writing a temp file. Done to fix
-                # problems with passing a NamedTemporaryFile to
-                # ImageFont.truetype() on Windows, see https://t.ly/LiF_k
-                with BytesIO(res.content) as fontdata:
-                    font = ImageFont.truetype(fontdata)
+                # Create a temporary file to download the font
+                with NamedTemporaryFile() as temp:
+                    temp.write(res.content)
+                    temp.flush()
+
+                    # Extract font family name and style
+                    font = ImageFont.truetype(temp.name)
                     name, style = font.getname()
                     name = " ".join([name.replace(family, ""), style]).strip()
-                    target = os.path.join(path, family, f"{name}.ttf")
 
-                # write file to cache
-                write_file(res.content, target)
+                    # Move fonts to cache directory
+                    target = os.path.join(path, family, f"{name}.ttf")
+                    copy_file(temp.name, target)
 
 # -----------------------------------------------------------------------------
 # Data

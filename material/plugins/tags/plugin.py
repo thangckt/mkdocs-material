@@ -97,10 +97,8 @@ class TagsPlugin(BasePlugin[TagsConfig]):
             return self._render_tag_index(markdown)
 
         # Add page to tags index
-        tags = page.meta.get("tags", [])
-        if tags:
-            for tag in tags:
-                self.tags[tag].append(page)
+        for tag in page.meta.get("tags", []):
+            self.tags[tag].append(page)
 
     # Inject tags into page (after search and before minification)
     def on_page_context(self, context, page, config, nav):
@@ -112,8 +110,7 @@ class TagsPlugin(BasePlugin[TagsConfig]):
             return
 
         # Provide tags for page
-        context["tags"] =[]
-        if "tags" in page.meta and page.meta["tags"]:
+        if "tags" in page.meta:
             context["tags"] = [
                 self._render_tag(tag)
                     for tag in page.meta["tags"]
@@ -128,11 +125,7 @@ class TagsPlugin(BasePlugin[TagsConfig]):
             log.error(f"Tags file '{path}' does not exist.")
             sys.exit(1)
 
-        # Add tags file to files - note: since MkDoc 1.6, not removing the
-        # file before adding it to the end will trigger a deprecation warning
-        # The new tags plugin does not require this hack, so we're just going
-        # to live with it until the new tags plugin is released.
-        files.remove(file)
+        # Add tags file to files
         files.append(file)
         return file
 
