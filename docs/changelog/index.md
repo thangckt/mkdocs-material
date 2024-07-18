@@ -2,6 +2,43 @@
 
 ## Material for MkDocs
 
+### 9.5.29 <small>July 14, 2024</small> { id="9.5.29" }
+
+- Updated Galician translations
+- Fixed #7362: Annotations in figure captions rendering incorrectly
+
+### 9.5.28 <small>July 2, 2024</small> { id="9.5.28" }
+
+- Fixed #7313: Improved tooltips mounted in sidebar when feature is disabled
+
+### 9.5.27 <small>June 16, 2024</small> { id="9.5.27" }
+
+- Updated Estonian translations
+
+### 9.5.26 <small>June 6, 2024</small> { id="9.5.26" }
+
+- Fixed #7232: Tab switches on scroll when linking tabs (9.5.19 regression)
+- Fixed #7230: Blog author avatar broken when referring to local file
+
+### 9.5.25 <small>May 27, 2024</small> { id="9.5.25" }
+
+- Fixed #7209: Tags plugin crashing on numeric tags
+
+### 9.5.24 <small>May 20, 2024</small> { id="9.5.24" }
+
+- Fixed #7187: Version selector title rendering issue
+
+### 9.5.23 <small>May 15, 2024</small> { id="9.5.23" }
+
+- Fixed #7183: Edge case in anchor navigation when using instant navigation
+- Fixed #6436: Version selector not showing version alias
+
+### 9.5.22 <small>May 12, 2024</small> { id="9.5.22" }
+
+- Fixed #7170: Copy button adds empty lines for line spans (9.5.18 regression)
+- Fixed #7160: Version switching doesn't stay on page (9.5.5 regression)
+- Fixed #5619: Links in Mermaid.js diagrams not discernible
+
 ### 9.5.21 <small>May 3, 2024</small> { id="9.5.21" }
 
 - Fixed #7133: Ensure latest version of Mermaid.js is used

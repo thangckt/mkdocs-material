@@ -1,3 +1,53 @@
+mkdocs-material-9.5.29 (2024-07-14)
+
+  * Updated Galician translations
+  * Fixed #7362: Annotations in figure captions rendering incorrectly
+
+mkdocs-material-9.5.28 (2024-07-02)
+
+  * Fixed #7313: Improved tooltips mounted in sidebar when feature is disabled
+
+mkdocs-material-9.5.27 (2024-06-16)
+
+  * Updated Estonian translations
+
+mkdocs-material-9.5.26 (2024-06-06)
+
+  * Fixed #7232: Tab switches on scroll when linking tabs (9.5.19 regression)
+  * Fixed #7230: Blog author avatar broken when referring to local file
+
+mkdocs-material-9.5.25+insiders-4.53.11 (2024-05-27)
+
+  * Fixed projects plugin crashing when serving before building subprojects
+
+mkdocs-material-9.5.25 (2024-05-27)
+
+  * Fixed #7209: Tags plugin crashing on numeric tags
+
+mkdocs-material-9.5.24+insiders-4.53.10 (2024-05-20)
+
+  * Fixed projects plugin crashing in serve mode when disabled
+  * Fixed projects plugin crashing when building nested projects
+
+mkdocs-material-9.5.24+insiders-4.53.9 (2024-05-20)
+
+  * Fixed #7191: Tags listings not rendering when toc_depth is changed
+
+mkdocs-material-9.5.24 (2024-05-20)
+
+  * Fixed #7187: Version selector title rendering issue
+
+mkdocs-material-9.5.23 (2024-05-15)
+
+  * Fixed #7183: Edge case in anchor navigation when using instant navigation
+  * Fixed #6436: Version selector not showing version alias
+
+mkdocs-material-9.5.22 (2024-05-12)
+
+  * Fixed #7170: Copy button adds empty lines for line spans (9.5.18 regression)
+  * Fixed #7160: Version switching doesn't stay on page (9.5.5 regression)
+  * Fixed #5619: Links in Mermaid.js diagrams not discernible
+
 mkdocs-material-9.5.21 (2024-05-03)
 
   * Fixed #7133: Ensure latest version of Mermaid.js is used
