@@ -1,3 +1,22 @@
+mkdocs-material-9.5.32 (2024-08-19)
+
+  * Fixed RXSS vulnerability via deep link in search results
+  * Added support for fetching latest release from GitLab
+
+mkdocs-material-9.5.31+insiders-4.53.12 (2024-08-02)
+
+  * Fixed #7410: Instant previews jump on content tabs with anchor links
+  * Fixed #7408: Instant previews jump on content tabs
+
+mkdocs-material-9.5.31 (2024-08-02)
+
+  * Fixed #7405: DockerHub missing images > 9.5.27 due to change in Alpine/APK
+
+mkdocs-material-9.5.30 (2024-07-23)
+
+  * Fixed #7380: Navigation icons disappearing on hover in Safari
+  * Fixed #7367: Blog readtime computation includes SVG text content
+
 mkdocs-material-9.5.29 (2024-07-14)
 
   * Updated Galician translations

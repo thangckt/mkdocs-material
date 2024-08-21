@@ -2,6 +2,20 @@
 
 ## Material for MkDocs
 
+### 9.5.32 <small>August 19, 2024</small> { id="9.5.32" }
+
+- Fixed RXSS vulnerability via deep link in search results
+- Added support for fetching latest release from GitLab
+
+### 9.5.31 <small>August 2, 2024</small> { id="9.5.31" }
+
+- Fixed #7405: DockerHub missing images > 9.5.27 due to change in Alpine/APK
+
+### 9.5.30 <small>July 23, 2024</small> { id="9.5.30" }
+
+- Fixed #7380: Navigation icons disappearing on hover in Safari
+- Fixed #7367: Blog readtime computation includes SVG text content
+
 ### 9.5.29 <small>July 14, 2024</small> { id="9.5.29" }
 
 - Updated Galician translations
