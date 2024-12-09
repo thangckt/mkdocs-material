@@ -10,7 +10,7 @@ categories:
   - Performance
 links:
   - plugins/search.md
-  - insiders/index.md#how-to-become-a-sponsor
+  - insiders/how-to-sponsor.md
 ---
 
 # Search: better, faster, smaller
@@ -627,4 +627,4 @@ for MkDocs! This is the first blog article that I decided to write after a
 short [Twitter survey] made me to. You're invited to leave a comment
 to share your experiences with the new search implementation.
 
-  [Twitter survey]: https://twitter.com/squidfunk/status/1434477478823743488
+  [X survey]: https://x.com/squidfunk/status/1434477478823743488

@@ -33,7 +33,7 @@ This renders a version selector in the header:
   <figcaption markdown>
 
 Check out the versioning example to see it in action –
-[squidfunk.github.io/mkdocs-material-example-versioning][version example]
+[mkdocs-material.github.io/example-versioning][version example]
 
   </figcaption>
 </figure>
@@ -52,7 +52,7 @@ Check out the versioning example to see it in action –
     whatever version of the documentation you want to direct people to.
 
   [Version selector preview]: ../assets/screenshots/versioning.png
-  [version example]: https://squidfunk.github.io/mkdocs-material-example-versioning/
+  [version example]: https://mkdocs-material.github.io/example-versioning/
   [Why use mike?]: https://github.com/jimporter/mike#why-use-mike
 
 ### Stay on the same page when switching versions
@@ -64,7 +64,6 @@ MkDocs implements this behavior by default, but there are a few caveats:
 - the [`site_url`][mkdocs.site_url] must be set correctly in `mkdocs.yml`.
   See the ["Publishing a new version"](#publishing-a-new-version) section for
   an example.
-- you must be viewing the site at that URL (and not locally, for example).
 - the redirect happens via JavaScript and there is no way to know which page you
   will be redirected to ahead of time.
 

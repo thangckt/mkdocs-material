@@ -1,3 +1,78 @@
+mkdocs-material-9.5.48 (2024-12-08)
+
+  * Fixed #7774: Disabling social cards doesn't work
+
+mkdocs-material-9.5.47 (2024-12-01)
+
+  * Fixed #7750: Numeric tags break search
+  * Fixed #7748: Blog plugin breaks when using future drafts (9.5.45 regression)
+
+mkdocs-material-9.5.46 (2024-11-25)
+
+  * Added support for removing preload hints in privacy plugin
+  * Fixed #7734: Code blocks in h5 headlines are uppercased
+  * Fixed #7725: Blog plugin crashing on missing timezone (9.5.45 regression)
+
+mkdocs-material-9.5.45 (2024-11-20)
+
+  * Reduced size of Docker image through multi-stage build
+  * Fixed #7708: Blog plugin crashing on YAML dates with timezones
+
+mkdocs-material-9.5.44 (2024-11-05)
+
+  * Fixed #7672: Font CSS 404's when using privacy plugin (9.5.43 regression)
+
+mkdocs-material-9.5.43 (2024-10-31)
+
+  * Added support for external images in SVGs in privacy plugin
+  * Fixed #7651: Privacy plugin doesn't handle quoted URLs in CSS
+
+mkdocs-material-9.5.42 (2024-10-20)
+
+  * Fixed #7625: Invalid encoding of boolean attributes in privacy plugin
+  * Fixed #7624: Crash when disabling privacy plugin (9.5.41 regression)
+
+mkdocs-material-9.5.41 (2024-10-15)
+
+  * Fixed #7619: Improved tooltip on logo disappears after instant navigation
+  * Fixed #7616: Race condition in built-in privacy plugin when inlining assets
+  * Fixed #7615: Comments and "Was this page helpful?" visible when printing
+
+mkdocs-material-9.5.40 (2024-10-10)
+
+  * Updated Latvian translations
+  * Fixed #7597: Social cards not using site name on home page
+
+mkdocs-material-9.5.39+insiders-4.53.14 (2024-09-29)
+
+  * Fixed #7567: Empty headlines when using typeset plugin with anchorlinks
+
+mkdocs-material-9.5.39 (2024-09-29)
+
+  * Fixed #7226: not staying on page when using mike's canonical versioning
+
+mkdocs-material-9.5.38 (2024-09-26)
+
+  * Added Albanian translations
+
+mkdocs-material-9.5.37 (2024-09-25)
+
+  * Added 4th and 5th level ordered list styles
+  * Fixed #7548: Tags have no spacing in search
+
+mkdocs-material-9.5.36 (2024-09-21)
+
+  * Fixed #7544: Social cards incorrectly rendering HTML entities
+  * Fixed #7542: Improved support for setting custom list styles
+
+mkdocs-material-9.5.35 (2024-09-18)
+
+  * Fixed #7498: Search not showing for Vietnamese language
+
+mkdocs-material-9.5.34+insiders-4.53.13 (2024-09-14)
+
+  * Fixed #7520: Social plugin errors for generated files (MkDocs 1.6+)
+
 mkdocs-material-9.5.34 (2024-08-31)
 
   * Updated Mermaid.js to version 11 (latest)
@@ -1148,7 +1223,7 @@ mkdocs-material-8.5.11+insiders-4.27.0 (2022-12-20)
 
 mkdocs-material-8.5.11 (2022-11-30)
 
-  * Let it snow, see https://twitter.com/squidfunk/status/1597939243090788352
+  * Let it snow, see https://x.com/squidfunk/status/1597939243090788352
 
 mkdocs-material-8.5.10+insiders-4.26.6 (2022-11-28)
 
