@@ -1,3 +1,62 @@
+mkdocs-material-9.6.7 (2025-03-03)
+
+  * Fixed #8056: Error in backrefs implementation (9.6.6 regression)
+  * Fixed #8054: Unescaped quotes in ARIA labels of table of contents
+
+mkdocs-material-9.6.6 (2025-03-01)
+
+  * Fixed #8040: Privacy plugin not replacing exteral assets (9.6.5 regression)
+  * Fixed #8031: Replace unmtaintained regex package in search plugin
+
+mkdocs-material-9.6.5 (2025-02-20)
+
+  * Fixed #8016: Tags listing not showing when when file name has spaces
+  * Fixed #8012: Privacy plugin crashes if HTTP download fails
+
+mkdocs-material-9.6.4 (2025-02-12)
+
+  * Fixed #7985: Blog content sometimes not stretching to full width
+  * Fixed #7978: Navigation rendering bug in Safari 18.3
+
+mkdocs-material-9.6.3 (2025-02-07)
+
+  * Fixed rendering of arrow heads in Mermaid.js class diagrams
+  * Fixed #7960: Tags plugin crashes on numeric metadata titles
+
+mkdocs-material-9.6.2 (2025-02-03)
+
+  * Fixed #7955: Excessively long words don't break on narrow screens
+  * Fixed #7947: Scope setting interferes with outdated version banner
+
+mkdocs-material-9.6.1 (2025-01-31)
+
+  * Fixed #7943: Tags plugin crashing due to merge error
+
+mkdocs-material-9.6.0 (2025-01-31)
+
+  * Added meta plugin
+  * Rewrite of the tags plugin
+  * Added support for allow lists in tags plugin
+  * Added support for and custom sorting in tags plugin
+  * Added support for related links in blog plugin
+  * Added support for custom index pages in blog plugin
+  * Added support for navigation subtitles
+  * Fixed #7924: Anchors might require two clicks when using instant navigation
+
+mkdocs-material-9.5.50 (2025-01-18)
+
+  * Fixed #7913: Social plugin renders attribute lists in page title
+
+mkdocs-material-9.5.49+insiders-4.53.15 (2025-01-15)
+
+  * Fixed #7896: Scoped tags listings not rendering in subsections
+
+mkdocs-material-9.5.49 (2024-12-16)
+
+  * Adjusted title color in dark mode for all supported Mermaid.js diagrams
+  * Fixed #7803: Privacy plugin crashes on generated files
+  * Fixed #7781: Mermaid.js flow chart title not visible in dark mode
+
 mkdocs-material-9.5.48 (2024-12-08)
 
   * Fixed #7774: Disabling social cards doesn't work
