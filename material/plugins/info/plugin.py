@@ -1,4 +1,4 @@
-# Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -23,7 +23,7 @@ import json
 import logging
 import os
 import platform
-import regex
+import re
 import requests
 import site
 import sys
@@ -408,9 +408,8 @@ class InfoPlugin(BasePlugin[InfoConfig]):
 
         # Resolve the path into POSIX format to match the patterns
         pattern_path = _resolve_pattern(abspath, return_path = True)
-
         for pattern in self.exclusion_patterns:
-            if regex.search(pattern, pattern_path):
+            if re.search(pattern, pattern_path):
                 log.debug(f"Excluded pattern '{pattern}': {abspath}")
                 self.excluded_entries.append(f"{pattern} - {pattern_path}")
                 return True

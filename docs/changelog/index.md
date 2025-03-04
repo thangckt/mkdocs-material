@@ -2,6 +2,61 @@
 
 ## Material for MkDocs
 
+### 9.6.7 <small>March 3, 2025</small> { id="9.6.7" }
+
+- Fixed #8056: Error in backrefs implementation (9.6.6 regression)
+- Fixed #8054: Unescaped quotes in ARIA labels of table of contents
+
+### 9.6.6 <small>March 1, 2025</small> { id="9.6.6" }
+
+- Fixed #8040: Privacy plugin not replacing exteral assets (9.6.5 regression)
+- Fixed #8031: Replace unmtaintained `regex` package in search plugin
+
+### 9.6.5 <small>February 20, 2025</small> { id="9.6.5" }
+
+- Fixed #8016: Tags listing not showing when when file name has spaces
+- Fixed #8012: Privacy plugin crashes if HTTP download fails
+
+### 9.6.4 <small>February 12, 2025</small> { id="9.6.4" }
+
+- Fixed #7985: Blog content sometimes not stretching to full width
+- Fixed #7978: Navigation rendering bug in Safari 18.3
+
+### 9.6.3 <small>February 7, 2025</small> { id="9.6.3" }
+
+- Fixed rendering of arrow heads in Mermaid.js class diagrams
+- Fixed #7960: Tags plugin crashes on numeric metadata titles
+
+### 9.6.2 <small>February 3, 2025</small> { id="9.6.2" }
+
+- Fixed #7955: Excessively long words don't break on narrow screens
+- Fixed #7947: Scope setting interferes with outdated version banner
+
+### 9.6.1 <small>January 31, 2025</small> { id="9.6.1" }
+
+- Fixed #7943: Tags plugin crashing due to merge error
+
+### 9.6.0 <small>January 31, 2025</small> { id="9.6.0" }
+
+- Added meta plugin
+- Rewrite of the tags plugin
+- Added support for allow lists in tags plugin
+- Added support for and custom sorting in tags plugin
+- Added support for related links in blog plugin
+- Added support for custom index pages in blog plugin
+- Added support for navigation subtitles
+- Fixed #7924: Anchors might require two clicks when using instant navigation
+
+### 9.5.50 <small>January 18, 2025</small> { id="9.5.50" }
+
+- Fixed #7913: Social plugin renders attribute lists in page title
+
+### 9.5.49 <small>December 16, 2024</small> { id="9.5.49" }
+
+- Adjusted title color in dark mode for all supported Mermaid.js diagrams
+- Fixed #7803: Privacy plugin crashes on generated files
+- Fixed #7781: Mermaid.js flow chart title not visible in dark mode
+
 ### 9.5.48 <small>December 8, 2024</small> { id="9.5.48" }
 
 - Fixed #7774: Disabling social cards doesn't work

@@ -1,4 +1,4 @@
-# Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -43,6 +43,8 @@ from xml.etree.ElementTree import Element, tostring
 
 from .config import PrivacyConfig
 from .parser import FragmentParser
+
+DEFAULT_TIMEOUT_IN_SECS = 5
 
 # -----------------------------------------------------------------------------
 # Classes
@@ -257,7 +259,7 @@ class PrivacyPlugin(BasePlugin[PrivacyConfig]):
         # quote, we need to catch this here, as we're using pretty basic
         # regular expression based extraction
         raise PluginError(
-            f"Could not parse due to possible syntax error in HTML: \n\n"
+            "Couldn't parse due to possible syntax error in HTML: \n\n"
             + fragment
         )
 
@@ -266,6 +268,11 @@ class PrivacyPlugin(BasePlugin[PrivacyConfig]):
     def _parse_media(self, initiator: File) -> list[URL]:
         _, extension = posixpath.splitext(initiator.dest_uri)
         if extension not in self.assets_expr_map:
+            return []
+
+        # Skip if source path is not set, which might be true for generated
+        # files or for files that were added programatically in plugins
+        if not initiator.abs_src_path:
             return []
 
         # Find and extract all external asset URLs
@@ -305,21 +312,24 @@ class PrivacyPlugin(BasePlugin[PrivacyConfig]):
                     # Replace external favicon, preload hint or style sheet
                     if rel in ("icon", "preload", "stylesheet"):
                         file = self._queue(url, config)
-                        el.set("href", resolve(file))
+                        if file:
+                            el.set("href", resolve(file))
 
             # Handle external script or image
             if el.tag == "script" or el.tag == "img":
                 url = urlparse(el.get("src"))
                 if not self._is_excluded(url, initiator):
                     file = self._queue(url, config)
-                    el.set("src", resolve(file))
+                    if file:
+                        el.set("src", resolve(file))
 
             # Handle external image in SVG
             if el.tag == "image":
                 url = urlparse(el.get("href"))
                 if not self._is_excluded(url, initiator):
                     file = self._queue(url, config)
-                    el.set("href", resolve(file))
+                    if file:
+                        el.set("href", resolve(file))
 
             # Return element as string
             return self._print(el)
@@ -375,7 +385,8 @@ class PrivacyPlugin(BasePlugin[PrivacyConfig]):
             # Fetch external asset synchronously, as it either has no extension
             # or is fetched from a context in which replacements are done
             else:
-                self._fetch(file, config)
+                if not self._fetch(file, config):
+                    return None
 
             # Register external asset as file - it might have already been
             # registered, and since MkDocs 1.6, trigger a deprecation warning
@@ -399,18 +410,30 @@ class PrivacyPlugin(BasePlugin[PrivacyConfig]):
 
             # Download external asset
             log.info(f"Downloading external file: {file.url}")
-            res = requests.get(file.url, headers = {
+            try:
+                res = requests.get(
+                    file.url,
+                    headers = {
+                        # Set user agent explicitly, so Google Fonts gives us
+                        # *.woff2 files, which according to caniuse.com is the
+                        # only format we need to download as it covers the range
+                        # range of browsers we're officially supporting.
+                        "User-Agent": " ".join(
+                            [
+                                "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+                                "AppleWebKit/537.36 (KHTML, like Gecko)",
+                                "Chrome/98.0.4758.102 Safari/537.36",
+                            ]
+                        )
+                    },
+                    timeout=DEFAULT_TIMEOUT_IN_SECS,
+                )
+                res.raise_for_status()
 
-                # Set user agent explicitly, so Google Fonts gives us *.woff2
-                # files, which according to caniuse.com is the only format we
-                # need to download as it covers the entire range of browsers
-                # we're officially supporting.
-                "User-Agent": " ".join([
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
-                    "AppleWebKit/537.36 (KHTML, like Gecko)",
-                    "Chrome/98.0.4758.102 Safari/537.36"
-                ])
-            })
+            # Intercept errors of type `ConnectionError` and `HTTPError`
+            except Exception as error:
+                log.warning(f"Couldn't retrieve {file.url}: {error}")
+                return False
 
             # Compute expected file extension and append if missing
             mime = res.headers["content-type"].split(";")[0]
@@ -460,6 +483,9 @@ class PrivacyPlugin(BasePlugin[PrivacyConfig]):
         for url in self._parse_media(file):
             if not self._is_excluded(url, file):
                 self._queue(url, config, concurrent = True)
+
+        # External asset was successfully downloaded
+        return True
 
     # Patch all links to external assets in the given file
     def _patch(self, initiator: File):

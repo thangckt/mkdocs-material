@@ -1,4 +1,4 @@
-# Copyright (c) 2016-2024 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -20,6 +20,11 @@
 
 from datetime import date, datetime, time, timezone
 from mkdocs.config.base import BaseConfigOption, Config, ValidationError
+from mkdocs.config.config_options import ListOfItems, T
+from mkdocs.structure.files import Files
+from mkdocs.structure.nav import (
+    Navigation, _add_parent_links, _data_to_navigation
+)
 from typing import Dict
 
 # -----------------------------------------------------------------------------
@@ -97,3 +102,27 @@ class PostDate(BaseConfigOption[DateDict]):
 
         # Return date dictionary
         return value
+
+# -----------------------------------------------------------------------------
+
+# Post links option
+class PostLinks(BaseConfigOption[Navigation]):
+
+    # Create navigation from structured items - we don't need to provide a
+    # configuration object to the function, because it will not be used
+    def run_validation(self, value: object):
+        items = _data_to_navigation(value, Files([]), None)
+        _add_parent_links(items)
+
+        # Return navigation
+        return Navigation(items, [])
+
+# -----------------------------------------------------------------------------
+
+# Unique list of items
+class UniqueListOfItems(ListOfItems[T]):
+
+    # Ensure that each item is unique
+    def run_validation(self, value: object):
+        data = super().run_validation(value)
+        return list(dict.fromkeys(data))

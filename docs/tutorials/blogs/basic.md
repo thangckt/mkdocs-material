@@ -143,7 +143,7 @@ header to indicate that a post is still in draft form.
     Create a second blog post in `docs/blogs/posts/draft.md` with the following
     contents:
 
-    ```hl_lines="3"
+    ```hl_lines="4"
     ---
     date:
       created: 2024-01-01
@@ -240,7 +240,7 @@ attribute in the page header:
 
     Add the `pin` attribute to your first blog post:
 
-    ```hl_lines="5"
+    ```hl_lines="6"
     ---
     date:
       created: 2023-12-31
@@ -256,15 +256,10 @@ attribute in the page header:
 
 ### Related links
 
-<!-- md:sponsors -->
-<!-- md:version insiders-4.23.0 -->
-<!-- md:flag experimental -->
-
 When your blog is part of a wider site such as technical documentation, you
 will want to provide links from blog posts into your other content. One way you
-can do this is to have a related links section. In the [Insiders Edition], the
-blog plugin can create one for you if you provide link targets in your page
-header:
+can do this is to have a related links section. The blog plugin can create one
+for you if you provide link targets in your page header:
 
 !!! example "Add a related links section <!-- md:sponsors -->"
 
@@ -312,19 +307,13 @@ browser window to see this in action.
 
 ## Meta plugin
 
-<!-- md:sponsors -->
-<!-- md:version insiders-4.21.0 -->
-<!-- md:plugin [meta] – built-in -->
-<!-- md:flag experimental -->
-
-The Meta plugin is available in the [Insiders Edition].
-It helps simplify the management of metadata that is common to a group of
-files in the same subdirectory. Instead of having to repeat the
-same metadata in the page headers of a number of files, you can add a
-`.meta.yml` file in the directory and the Meta plugin will merge its contents
-into the headers of all the pages contained.
-Settings from the page header take precedence, so you can always override
-settings by adding them to a post's header.
+The Meta plugin helps simplify the management of metadata that is common to a
+group of files in the same subdirectory. Instead of having to repeat the same
+metadata in the page headers of a number of files, you can add a `.meta.yml`
+file in the directory and the Meta plugin will merge its contents into the
+headers of all the pages contained. Settings from the page header take
+precedence, so you can always override settings by adding them to a post's
+header.
 
 For example, you may want to manage drafts by keeping them in a directory
 together so that they are not only flagged as drafts but also easier to find.
@@ -351,7 +340,9 @@ output to the files to figure out which posts are drafts.)
         ```
 
     === "Windows"
-        TODO
+        ```powershell
+        $ mkdir docs\blog\posts\drafts
+        ```
 
     Now, within this folder, crate a file `.meta.yml` that contains:
 
