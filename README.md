@@ -132,9 +132,6 @@
   <a href="https://neptune.ai/" target=_blank><img
     src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-neptune-ai.png" height="58"
   /></a>
-  <!-- <a href="https://cash.app/" target=_blank><img
-    src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-cashapp.png" height="58"
-  /></a> -->
   <a href="https://rackn.com/" target=_blank><img
     src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-rackn.png" height="58"
   /></a>
@@ -150,17 +147,11 @@
   <a href="https://botcity.dev/" target=_blank><img
     src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-botcity.png" height="58"
   /></a>
-  <a href="https://www.springernature.com/gp" target=_blank><img
-    src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-sn-technology.png" height="58"
-  /></a>
   <a href="https://kolena.io/" target=_blank><img
     src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-kolena.png" height="58"
   /></a>
   <a href="https://www.evergiving.com/" target=_blank><img
     src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-evergiving.png" height="58"
-  /></a>
-  <a href="https://koor.tech/" target=_blank><img
-    src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-koor.png" height="58"
   /></a>
   <a href="https://astral.sh/" target=_blank><img
     src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-astral.png" height="58"
@@ -200,6 +191,9 @@
   /></a>
   <a href="https://intercomestibles.ch/" target=_blank><img
     src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-intercomestibles.png" height="58"
+  /></a>
+  <a href="https://www.centara.com/" target=_blank><img
+    src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-centara.png" height="58"
   /></a>
 </p>
 <p>&nbsp;</p>
@@ -271,7 +265,6 @@ For detailed installation instructions, configuration options, and a demo, visit
 [AWS](https://aws.github.io/copilot-cli/),
 [Bloomberg](https://bloomberg.github.io/selekt/),
 [CERN](http://abpcomputing.web.cern.ch/),
-[CloudFlare](https://cloudflare.github.io/itty-router-openapi/),
 [Datadog](https://datadoghq.dev/integrations-core/),
 [Google](https://google.github.io/accompanist/),
 [Harvard](https://informatics.fas.harvard.edu/),
@@ -284,6 +277,7 @@ For detailed installation instructions, configuration options, and a demo, visit
 [Microsoft](https://microsoft.github.io/code-with-engineering-playbook/),
 [Mozilla](https://mozillafoundation.github.io/engineering-handbook/),
 [Netflix](https://netflix.github.io/titus/),
+[OpenAI](https://openai.github.io/openai-agents-python/),
 [Red Hat](https://ansible.readthedocs.io/projects/lint/),
 [Roboflow](https://inference.roboflow.com/),
 [Salesforce](https://policy-sentry.readthedocs.io/),
@@ -318,6 +312,7 @@ For detailed installation instructions, configuration options, and a demo, visit
 [LlamaIndex](https://docs.llamaindex.ai/),
 [NetBox](https://netboxlabs.com/docs/netbox/en/stable/),
 [Nokogiri](https://nokogiri.org/),
+[OpenAI](https://openai.github.io/openai-agents-python/),
 [OpenFaaS](https://docs.openfaas.com/),
 [OpenSSL](https://docs.openssl.org/),
 [Orchard Core](https://docs.orchardcore.net/en/latest/),

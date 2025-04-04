@@ -2,6 +2,45 @@
 
 ## Material for MkDocs
 
+### 9.6.11 <small>April 1, 2025</small> { id="9.6.11" }
+
+- Updated Docker image to latest Alpine Linux
+- Bump required Jinja version to 3.1
+- Fixed #8133: Jinja filter `items` not available (9.6.10 regression)
+- Fixed #8128: Search plugin not entirely disabled via enabled setting
+
+### 9.6.10 <small>March 30, 2025</small> { id="9.6.10" }
+
+This version is a pure refactoring release, and does not contain new features
+or bug fixes. It strives to improve the compatibility of our templates with
+alternative Jinja-like template engines that we're currently exploring,
+including [minijinja].
+
+Additionally, it replaces several instances of Python function invocations
+with idiomatic use of template filters. All instances where variables have
+been mutated inside templates have been replaced. Most changes have been made
+in partials, and only a few in blocks, and all of them are fully backward
+compatible, so no changes to overrides are necessary.
+
+Note that this release does not replace the Jinja template engine with
+minijinja. However, our templates are now 99% compatible with minijinja,
+which means we can explore alternative Jinja-compatible implementations.
+Additionally, immutability and removal of almost all Python function
+invocations means much more idiomatic templating.
+
+  [minijinja]: https://github.com/mitsuhiko/minijinja
+
+### 9.6.9 <small>March 17, 2025</small> { id="9.6.9" }
+
+- Updated Serbo-Croatian translations
+- Fixed #8086: Custom SVG icons containing hashes break rendering
+- Fixed #8067: Drawer has gap on right side in Firefox on some OSs
+
+### 9.6.8 <small>March 13, 2025</small> { id="9.6.8" }
+
+- Added Welsh translations
+- Fixed #8076: Privacy plugin crashes if HTTP download fails
+
 ### 9.6.7 <small>March 3, 2025</small> { id="9.6.7" }
 
 - Fixed #8056: Error in backrefs implementation (9.6.6 regression)
@@ -10,7 +49,7 @@
 ### 9.6.6 <small>March 1, 2025</small> { id="9.6.6" }
 
 - Fixed #8040: Privacy plugin not replacing exteral assets (9.6.5 regression)
-- Fixed #8031: Replace unmtaintained `regex` package in search plugin
+- Fixed #8031: Replace unmaintained `regex` package in search plugin
 
 ### 9.6.5 <small>February 20, 2025</small> { id="9.6.5" }
 
