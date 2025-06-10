@@ -138,6 +138,8 @@ Page is set to `gh-pages`.
 
 Your documentation should shortly appear at `<username>.github.io/<repository>`.
 
+To publish your site on a custom domain, please refer to the [MkDocs documentation].
+
   [GitHub Actions]: https://github.com/features/actions
   [MkDocs plugins]: https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins
   [personal access token]: https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
@@ -147,6 +149,7 @@ Your documentation should shortly appear at `<username>.github.io/<repository>`.
   [publishing source branch]: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
   [manual page]: https://man7.org/linux/man-pages/man1/date.1.html
   [caching]: plugins/requirements/caching.md
+  [MkDocs documentation]: https://www.mkdocs.org/user-guide/deploying-your-docs/#custom-domains
 
 ### with MkDocs
 
@@ -254,10 +257,8 @@ other providers:
 <div class="mdx-columns" markdown>
 
 - [:simple-cloudflarepages: Cloudflare Pages][Cloudflare Pages]
-- [:simple-digitalocean: DigitalOcean][DigitalOcean]
 - [:material-airballoon-outline: Fly.io][Flyio]
 - [:simple-netlify: Netlify][Netlify]
-- [:simple-vercel: Vercel][Vercel]
 - [:simple-scaleway: Scaleway][Scaleway]
 
 </div>
@@ -267,9 +268,7 @@ other providers:
   [masked custom variables]: https://docs.gitlab.com/ee/ci/variables/#mask-a-cicd-variable
   [default branch]: https://docs.gitlab.com/ee/user/project/repository/branches/default.html
   [Cloudflare Pages]: https://deborahwrites.com/guides/deploy-host-mkdocs/deploy-mkdocs-material-cloudflare/
-  [DigitalOcean]: https://deborahwrites.com/guides/deploy-host-mkdocs/deploy-mkdocs-material-digitalocean-app-platform/
   [Flyio]: https://documentation.breadnet.co.uk/cloud/fly/mkdocs-on-fly/
   [Netlify]: https://deborahwrites.com/guides/deploy-host-mkdocs/deploy-mkdocs-material-netlify/
-  [Vercel]: https://deborahwrites.com/guides/deploy-host-mkdocs/deploy-mkdocs-material-vercel/
   [Scaleway]: https://www.scaleway.com/en/docs/tutorials/using-bucket-website-with-mkdocs/
 
