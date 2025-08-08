@@ -23,10 +23,12 @@ on:
   push:
     branches:
       - master
+      - main
   pull_request:
   release:
     types:
       - published
+  workflow_dispatch:
 
 env:
   NODE_VERSION: 18.x
