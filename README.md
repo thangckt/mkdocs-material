@@ -69,13 +69,10 @@
     src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-sailpoint.png" height="120"
   /></a>
   <a href="https://futureplc.com/" target=_blank><img
-    src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-future.svg" height="120"
+    src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-future.svg" width="332" height="120"
   /></a>
   <a href="https://opensource.siemens.com/" target=_blank><img
     src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-siemens.png" height="120"
-  /></a>
-  <a href="https://pydantic.dev/logfire/" target=_blank><img
-    src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-logfire.png" height="120"
   /></a>
 </p>
 <p>&nbsp;</p>
@@ -107,9 +104,6 @@
   /></a>
   <a href="https://wwt.com" target=_blank><img
     src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-wwt.png" height="58"
-  /></a>
-  <a href="https://coda.io" target=_blank><img
-    src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-coda.png" height="58"
   /></a>
   <a href="https://elastic.co" target=_blank><img
     src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-elastic.png" height="58"
@@ -191,6 +185,12 @@
   /></a>
   <a href="https://www.centara.com/" target=_blank><img
     src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-centara.png" height="58"
+  /></a>
+  <a href="https://pydantic.dev/logfire/" target=_blank><img
+    src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-logfire.png" height="58"
+  /></a>
+  <a href="https://www.vector.com/" target=_blank><img
+    src="https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-vector.png" height="58"
   /></a>
 </p>
 <p>&nbsp;</p>
@@ -287,7 +287,9 @@ For detailed installation instructions, configuration options, and a demo, visit
 ### ... and successful Open Source projects
 
 [Amp](https://amp.rs/docs/),
+[Apache Iceberg](https://iceberg.apache.org/),
 [Arduino](https://arduino.github.io/arduino-cli/),
+[Asahi Linux](https://asahilinux.org/docs/),
 [Auto-GPT](https://docs.agpt.co/),
 [AutoKeras](https://autokeras.com/),
 [BFE](https://www.bfe-networks.net/),
@@ -298,9 +300,11 @@ For detailed installation instructions, configuration options, and a demo, visit
 [Electron](https://www.electron.build/),
 [FastAPI](https://fastapi.tiangolo.com/),
 [FlatBuffers](https://flatbuffers.dev/),
+[{fmt}](https://fmt.dev/),
 [Freqtrade](https://www.freqtrade.io/en/stable/),
 [GoReleaser](https://goreleaser.com/),
 [GraphRAG](https://microsoft.github.io/graphrag/),
+[Headscale](https://headscale.net/),
 [HedgeDoc](https://docs.hedgedoc.org/),
 [Hummingbot](https://hummingbot.org/),
 [Knative](https://knative.dev/docs/),

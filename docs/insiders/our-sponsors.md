@@ -22,7 +22,6 @@ _Be our first gold sponsor!_
 [![SailPoint]{ style="height: 120px" }](https://documentation.sailpoint.com/){ target=_blank title="SailPoint" }
 [![Future]{ style="height: 120px" }](https://futureplc.com/){ target=_blank title="Future" }
 [![SIEMENS]{ style="height: 120px" }](https://opensource.siemens.com/){ target=_blank title="SIEMENS" }
-[![Pydantic Logfire]{ style="height: 120px" }](https://pydantic.dev/logfire/){ target=_blank title="Pydantic Logfire" }
 
 ----
 
@@ -37,7 +36,6 @@ _Be our first gold sponsor!_
 [![n8n]](https://n8n.io){ target=_blank title="n8n" }
 [![Dogado]](https://www.dogado.de){ target=_blank title="Dogado" }
 [![World Wide Technology]](https://wwt.com){ target=_blank title="World Wide Technology" }
-[![Coda]](https://coda.io){ target=_blank title="Coda" }
 [![Elastic]](https://elastic.co){ target=_blank title="Elastic" }
 [![IP Fabric]](https://ipfabric.io/){ target=_blank title="IP Fabric" }
 [![Apex.AI]](https://www.apex.ai/){ target=_blank title="Apex.AI" }
@@ -65,6 +63,8 @@ _Be our first gold sponsor!_
 [![OctoPerf]](https://octoperf.com/){ target=_blank title="OctoPerf" }
 [![Inter Comestibles]](https://intercomestibles.ch/){ target=_blank title="Inter Comestibles" }
 [![Centara]](https://www.centara.com/){ target=_blank title="Centara" }
+[![Pydantic Logfire]](https://pydantic.dev/logfire/){ target=_blank title="Pydantic Logfire" }
+[![Vector Informatik]](https://www.vector.com/){ target=_blank title="Vector Informatik" }
 
 </div>
 
@@ -79,7 +79,6 @@ _Be our first gold sponsor!_
   [n8n]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-n8n.png
   [Dogado]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-dogado.png
   [World Wide Technology]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-wwt.png
-  [Coda]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-coda.png
   [Elastic]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-elastic.png
   [IP Fabric]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-ip-fabric.png
   [Apex.AI]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-apex-ai.png
@@ -109,9 +108,10 @@ _Be our first gold sponsor!_
   [Future]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-future.svg
   [SIEMENS]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-siemens.png
   [OctoPerf]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-octoperf.png
-  [Pydantic Logfire]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-logfire.png
   [Inter Comestibles]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-intercomestibles.png
   [Centara]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-centara.png
+  [Pydantic Logfire]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-logfire.png
+  [Vector Informatik]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-vector.png
 
 <hr />
 
