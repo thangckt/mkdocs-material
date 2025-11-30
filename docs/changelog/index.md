@@ -2,6 +2,88 @@
 
 ## Material for MkDocs
 
+### 9.7.0 <small>November 11, 2025</small> { id="9.7.0" }
+
+!!! warning "Material for MkDocs is now in maintenance mode"
+
+    This is the last release of Material for MkDocs that will receive new features.
+    Going forward, the Material for MkDocs team focuses on [Zensical], a next-gen
+    static site generator built from first principles. We will provide critical
+    bug fixes and security updates for Material for MkDocs for 12 months at least.
+
+    [Read the full announcement on our blog]
+
+This release includes all features that were previously exclusive to the
+Insiders edition. These features are now freely available to everyone.
+
+__Note on deprecated plugins__: The [projects] and [typeset] plugins are
+included in this release, but must be considered deprecated. Both plugins
+proved unsustainable to maintain and represent architectural dead ends. They
+are provided as-is without ongoing support.
+
+__Changes__:
+
+- Added support for projects plugin (for compat, now deprecated)
+- Added support for typeset plugin (for compat, now deprecated)
+- Added support for pinned blog posts and author profiles
+- Added support for customizing pagination for blog index pages
+- Added support for customizing blog category sort order
+- Added support for staying on page when switching languages
+- Added support for disabling tags in table of contents
+- Added support for nested tags and shadow tags
+- Added support for footnote tooltips
+- Added support for instant previews
+- Added support for instant prefetching
+- Added support for custom social card layouts
+- Added support for custom social card background images
+- Added support for selectable rangs in code blocks
+- Added support for custom selectors for code annotations
+- Added support for configurable log level in privacy plugin
+- Added support for processing of external links in privacy plugin
+- Added support for automatic image optimization via optimize plugin
+- Added support for navigation paths (breadcrumbs)
+- Fixed #8519: Vector accents do not render when using KaTeX
+
+  [Zensical]: https://zensical.org
+  [Read the full announcement on our blog]: ../blog/posts/zensical.md
+  [projects]: ../plugins/projects.md
+  [typeset]: ../plugins/typeset.md
+
+### 9.6.23 <small>November 1, 2025</small> { id="9.6.23" }
+
+- Updated Burmese translation
+
+### 9.6.22 <small>October 15, 2025</small> { id="9.6.22" }
+
+- Updated Georgian translation
+
+### 9.6.21 <small>September 30, 2025</small> { id="9.6.21" }
+
+- Updated Serbian translations
+- Fixed #8458: Temporary pin of click dependency
+
+### 9.6.20 <small>September 15, 2025</small> { id="9.6.20" }
+
+- Fixed #8446: Deprecation warning as of Python 3.14 in Emoji extension
+- Fixed #8440: `&` character not escaped in search highlighting
+- Fixed #8439: FontAwesome icons color not set in social cards (regression)
+
+### 9.6.19 <small>September 7, 2025</small> { id="9.6.19" }
+
+- Added support for Python 3.14
+- Updated Bahasa Malaysia translations
+
+### 9.6.18 <small>August 22, 2025</small> { id="9.6.18" }
+
+- Updated Azerbaijani translations
+- Fixed last compat issues with [minijinja], now 100% compatible
+
+### 9.6.17 <small>August 15, 2025</small> { id="9.6.17" }
+
+- Fixed #8396: Videos do not autoplay when inside a content tab
+- Fixed #8394: Stroke width not effective in Mermaid.js diagrams
+- Fixed disappearing version selector when hiding page title
+
 ### 9.6.16 <small>July 26, 2025</small> { id="9.6.16" }
 
 - Fixed #8349: Info plugin doesn't correctly detect virtualenv in some cases
@@ -1159,7 +1241,7 @@ __Fixes__
 - Updated FontAwesome to v6 – [check which icons were renamed here]
 - Fixed #3545: Color palette toggle and search overlaying version selector
 
-  [check which icons were renamed here]: https://fontawesome.com/docs/web/setup/upgrade/whats-changed#icons-renamed-in-version-6
+  [check which icons were renamed here]: https://docs.fontawesome.com/v6/web/setup/upgrade/whats-changed#icons-renamed-in-version-6
 
 ### 8.1.10 <small>February 6, 2022</small> { id="8.1.10" }
 

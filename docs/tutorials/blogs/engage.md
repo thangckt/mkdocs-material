@@ -105,7 +105,7 @@ necessary links and define the icons to use.
     For popular social media systems, the link needs to be absolute and
     needs to include the scheme, most likely `https://`.
 
-    You can also use other schemes. For example, to cerate an icon that allows
+    You can also use other schemes. For example, to create an icon that allows
     people to create an email, add this:
 
     ```yaml
@@ -137,7 +137,7 @@ more involved, which is why there are companies offering components for this.
 
     "Share" and "Like" buttons that use integrations provided by social media
     companies often leave copious data traces even when the user does not
-    interact with these buttons. If you choose to integate such feature on
+    interact with these buttons. If you choose to integrate such feature on
     your site please be aware of the data protection implications and your
     duties as a provider to ensure that processing occurs only once the user
     has granted consent.
@@ -221,7 +221,7 @@ for MkDocs use GitHub, this seems like an obvious choice.
 [Giscus]: https://giscus.app/
 [GitHub Discussions]: https://docs.github.com/en/discussions
 
-To add Giscuss to your blog you will need to go through a number of steps:
+To add Giscus to your blog you will need to go through a number of steps:
 
 1. Create a GitHub repository if there is not already one
 2. Turn on discussions and install the [Giscus app]
@@ -245,7 +245,7 @@ want to work directly on an existing repository.
     `Features` in the `General` section. Tick the checkbox for `Discussions`.
     You will see that `Discussions` appears in the top navigation for the
     repository. If you are using a live repository then you may want to add some
-    minimal content to the dicussions section at this point and come back to the
+    minimal content to the discussions section at this point and come back to the
     tutorial.
 
     Next, you need to install the [Giscus app] by following the link in this
@@ -261,7 +261,7 @@ want to work directly on an existing repository.
        can control the Gicsus app and uninstall it if so desired.
 
 That is all the preparation you will need for the repository. Next, it is time
-to generate a piece of code that embeds Giscuss in your site. The resulting code
+to generate a piece of code that embeds Giscus in your site. The resulting code
 snippet will look something like this:
 
 ```html
@@ -294,7 +294,7 @@ snippet will look something like this:
        Because for a blog post the title is the basis of the URL, it makes
        sense to use the `Discussion title contains page <title>` option.
     4. Under `Discussion Category` choose `Announcements` to limit the creation
-       of new discussions to Giscuss and people with maintainer or admin
+       of new discussions to Giscus and people with maintainer or admin
        permissions.
     5. Under `Features`, select the following:
          1. Enable reactions for the main post
