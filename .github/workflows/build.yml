@@ -31,7 +31,7 @@ on:
   workflow_dispatch:
 
 env:
-  NODE_VERSION: 18.x
+  NODE_VERSION: 24.x
   PYTHON_VERSION: 3.x
 
 permissions:
@@ -98,7 +98,6 @@ jobs:
     permissions:
       id-token: write
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v5
 
@@ -118,6 +117,7 @@ jobs:
         run: python -m build
 
       - name: Publish Python package
+        if: github.event_name == 'release'
         uses: pypa/gh-action-pypi-publish@release/v1
 
   docker:
