@@ -102,6 +102,120 @@ export function watchTabs(
 }
 
 /**
+ * Set up overflow dropdown for navigation tabs (mimic Chrome bookmarks bar).
+ * Items that don't fit are hidden and shown in a fixed-position dropdown.
+ *
+ * @param el - Navigation tabs element (.md-tabs)
+ */
+function setupTabsOverflow(el: HTMLElement): void {
+  const list = el.querySelector<HTMLElement>(".md-tabs__list")
+  if (!list) return
+
+  // Clip overflow so hidden items don't create a scrollbar.
+  // overflow:clip (unlike hidden) does not create a scroll container, so
+  // clientWidth still accurately reflects the available space.
+  list.style.overflow = "clip"
+
+  // Dropdown appended to <body> so it escapes every overflow/clip ancestor.
+  const dropdown = document.createElement("ul")
+  dropdown.className = "md-tabs__overflow-dropdown"
+  dropdown.setAttribute("role", "menu")
+  document.body.append(dropdown)
+
+  // Use a real <button> – avoids the transition-delay/transform animation
+  // that .md-tabs__link carries, which would block reliable click handling.
+  const triggerLi = document.createElement("li")
+  triggerLi.className = "md-tabs__item md-tabs__item--overflow"
+  const triggerBtn = document.createElement("button")
+  triggerBtn.type = "button"
+  triggerBtn.className = "md-tabs__overflow-btn"
+  triggerBtn.textContent = "»"
+  triggerBtn.setAttribute("aria-label", "More tabs")
+  triggerBtn.setAttribute("aria-haspopup", "true")
+  triggerLi.append(triggerBtn)
+
+  let isOpen = false
+
+  const positionDropdown = (): void => {
+    const r = triggerBtn.getBoundingClientRect()
+    dropdown.style.top   = `${r.bottom}px`
+    dropdown.style.right = `${window.innerWidth - r.right}px`
+    dropdown.style.left  = "auto"
+  }
+
+  const openDropdown = (): void => {
+    positionDropdown()
+    dropdown.classList.add("md-tabs__overflow-dropdown--open")
+    isOpen = true
+    triggerBtn.setAttribute("aria-expanded", "true")
+  }
+
+  const closeDropdown = (): void => {
+    dropdown.classList.remove("md-tabs__overflow-dropdown--open")
+    isOpen = false
+    triggerBtn.setAttribute("aria-expanded", "false")
+  }
+
+  triggerBtn.addEventListener("click", ev => {
+    ev.stopPropagation()
+    isOpen ? closeDropdown() : openDropdown()
+  })
+  document.addEventListener("click", ev => {
+    if (isOpen && !dropdown.contains(ev.target as Node)) closeDropdown()
+  })
+  window.addEventListener("scroll",
+    () => { if (isOpen) positionDropdown() }, { passive: true })
+  window.addEventListener("resize",
+    () => { if (isOpen) positionDropdown() }, { passive: true })
+
+  const recalculate = (): void => {
+    if (list.clientWidth === 0) return   // tabs not rendered (narrow viewport)
+
+    closeDropdown()
+    dropdown.innerHTML = ""
+
+    const items = Array.from(
+      list.querySelectorAll<HTMLElement>(".md-tabs__item:not(.md-tabs__item--overflow)")
+    )
+    for (const item of items) item.hidden = false
+    triggerLi.remove()
+
+    const available = list.clientWidth
+    const totalNeeded = items.reduce((sum, it) => sum + it.offsetWidth, 0)
+    if (totalNeeded <= available) return   // everything fits
+
+    // Inject trigger first so its width is included in the budget.
+    list.append(triggerLi)
+    let used = triggerLi.offsetWidth
+    for (let i = 0; i < items.length; i++) {
+      if (used + items[i].offsetWidth > available) {
+        for (; i < items.length; i++) {
+          items[i].hidden = true
+          const clone = items[i].cloneNode(true) as HTMLElement
+          clone.hidden = false
+          clone.removeAttribute("aria-current")
+          dropdown.append(clone)
+        }
+        break
+      }
+      used += items[i].offsetWidth
+    }
+    if (dropdown.childElementCount === 0) triggerLi.remove()
+  }
+
+  let rafId = 0
+  const scheduleRecalc = (): void => {
+    cancelAnimationFrame(rafId)
+    rafId = requestAnimationFrame(recalculate)
+  }
+
+  // ResizeObserver covers both viewport changes (el is 100vw) and any
+  // non-viewport-driven size changes (e.g. sidebar opening).
+  new ResizeObserver(scheduleRecalc).observe(el)
+  requestAnimationFrame(recalculate)   // initial run
+}
+
+/**
  * Mount navigation tabs
  *
  * This function hides the navigation tabs when scrolling past the threshold
@@ -115,6 +229,7 @@ export function watchTabs(
 export function mountTabs(
   el: HTMLElement, options: MountOptions
 ): Observable<Component<Tabs>> {
+  setupTabsOverflow(el)
   return defer(() => {
     const push$ = new Subject<Tabs>()
     push$.subscribe({
