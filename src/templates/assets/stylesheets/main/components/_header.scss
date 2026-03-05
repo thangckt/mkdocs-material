@@ -268,3 +268,38 @@
         }
     }
 }
+
+// Tabs embedded inside the header nav element (navigation.tabs.header feature).
+// Make the tabs a proper flex child so remaining items (e.g. search) stay
+// visible instead of being pushed off-screen by the default width: 100%.
+.md-header__inner > .md-tabs {
+    flex: 1 1 0;
+    min-width: 0;
+    overflow: hidden;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+// When tabs are embedded in the header, fix the title width so the space
+// between site name and nav bar is independent from the site name string.
+//
+// The topic elements are position:absolute inside the ellipsis (required for
+// the slide transition), so the container cannot auto-size from them normally.
+// Making the ellipsis a grid with all topics in the same cell causes the grid
+// to size to the widest topic text, which then drives the title width.
+.md-header__inner:has(> .md-tabs) .md-header__title {
+    flex: 0 0 auto;
+    width: px2rem(240px);
+    overflow: hidden;
+
+    > .md-header__ellipsis {
+        position: static;
+        width: 100%;
+        display: grid;
+    }
+
+    .md-header__topic {
+        position: static;
+        grid-area: 1 / 1 / 2 / 2;
+    }
+}
